@@ -1,33 +1,107 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Avant Garde', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 section {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px;
+}
+
+section.secondary {
+    background-color: #f8f8f8;
 }
 
 .grid {
     display: grid;
-    grid-gap: 64px;
-}
-
-.img-responsive {
-    max-width: 100%;
+    grid-gap: 30px; /* Adjust grid gap as needed */
 }
 
 .grid-2-columns {
     grid-template-columns: 1fr 1fr;
 }
 
+.grid-2-columns div {
+    padding: 20px; /* Add padding to each grid item for spacing */
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adjust other styles as per your design */
+
+
 .grid-3-column-grid-with-first-narrow {
     grid-template-columns: 1fr 2fr 2fr;
+}
+
+.grid-3-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-color: #fff;
+    margin: 30px 0;
+
+}
+
+.card h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #272044;
+    margin: 0;
+}
+
+.card h5 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 36px;
+    color: #272044;
+    margin: 0;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px;
+    background-color: #462cb3;
+}
+
+.card-footer {
+  padding: 10px;  
 }
 
 header {
@@ -78,6 +152,7 @@ header a {
 
 main {
     background-color: #fff;
+    padding: 40px;
 }
 
 main h2 {
@@ -115,6 +190,7 @@ footer {
     background-color: #272044;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 40px;
 }
 
 footer h3 {
@@ -166,3 +242,77 @@ footer a {
         padding: 30px;
     }
 }
+
+/* Movie Cards and Grid Layout */
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+.movie-details {
+    padding: 20px;
+}
+
+.movie-details h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.movie-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.movie-details h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    padding: 10px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #462cb3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5f47c1;
+}
+
+@media screen and (max-width: 600px) {
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
